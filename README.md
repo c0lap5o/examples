@@ -1,2 +1,2 @@
 # examples
-Some java coding examples made by me in my learning journey
+Some java coding examples made in my learning journey
