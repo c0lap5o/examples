@@ -1,0 +1,18 @@
+Overview
+This project demonstrates the Proxy Design Pattern. The Proxy Design Pattern is a structural design pattern that provides a surrogate or placeholder for another object to control access to it. 
+This pattern is useful for various purposes, including lazy initialization, access control, logging, and more.
+
+How It Works
+Interface Payment: The Subject interface defines the common operation (makePayment()) that both the real object and the proxy will implement.
+
+Bank Account: The Bank Account class implements the Payment interface and provides the core functionality for the makePayment() method.
+
+Credit Card: The Credit Card class also implements the Payment interface. It controls access to the Bank Account, adding possible additional functionality such as lazy initialization, logging and security.
+        It delegates the actual request to the Bank Account.
+
+Proxy Pattern: The client interacts with the Proxy(Credit Card or MbWay), which forwards the request to the Bank Account while possibly performing additional operations.
+
+Benefits
+Control Access: The proxy can control access to the real object, allowing for functionalities such as lazy initialization or access control.
+Additional Functionality: The proxy can add extra behavior (e.g., logging, caching) without modifying the real object.
+Decoupling: The proxy decouples the client from the real object, promoting flexibility and reducing dependencies.
