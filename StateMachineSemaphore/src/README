@@ -1,0 +1,19 @@
+Overview
+This project demonstrates the State Machine Design Pattern. The State Machine Design Pattern is a behavioral design pattern that 
+allows an object to change its behavior when its internal state changes.
+The pattern encapsulates state-specific behavior in separate classes and delegates the behavior change to the current state object.
+This pattern is especially useful for scenarios where an object can be in multiple states and the behavior of the object changes based on its current state.
+
+How It Works
+Interface TrafficLightState and Car State: The State interface defines the behavior that is common to all concrete states.
+
+Concrete States: Car States (Moving, Stopping, Stopped) and Traffic Light States(Green,Yellow,Red) implement the State interface and provide specific behavior for their showState() and switchLight() methods.
+
+Car and Traffic Light: This classes maintain a reference to a State object that represents the current state of the context. It delegates the behavior to the current state and allows the state to be changed at runtime.
+
+Main class: In the main class, a random number is generated to determine the number of times the traffic light will switch colors. The state of the car is then printed to the console, and this state will change at runtime based on the current color of the traffic light.
+
+Benefits
+Separation of Concerns: The pattern separates the state-specific behavior into distinct classes, making the code easier to maintain and extend.
+Flexibility: The context can change its behavior at runtime by switching between different states.
+Encapsulation: State-related behavior is encapsulated within the respective state classes, promoting code organization and clarity.
