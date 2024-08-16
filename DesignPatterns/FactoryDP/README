@@ -1,0 +1,30 @@
+Overview
+This project demonstrates the Factory Design Pattern using a file management scenario. The Factory
+Design Pattern is a creational design pattern that provides an interface for creating objects in a
+super class but allows subclasses to alter the type of objects that will be created. This pattern
+promotes loose coupling by eliminating the need for client code to specify the exact class of object
+that will be created.
+
+How It Works
+Interface Definition: The File interface defines a common operation (open()) that must be implemented
+                      by all file types.
+
+Concrete Implementations: Classes such as PdfFile, WordFile, and TextFile implement the File interface
+                          and provide specific implementations for the open() method.
+
+Factory Class: The FileFactory class provides methods (createPdfFile(), createWordFile(), createTextFile())
+               to create instances of different file types. This encapsulates the object creation logic and
+               allows for easier extension and maintenance.
+
+Client Code: The client code uses the factory methods to obtain instances of the File interface. The client
+             does not need to know the specific class of the file being created, promoting flexibility and
+             reducing dependency on concrete classes.
+
+Benefits
+Encapsulation: The factory class handles the instantiation of concrete classes, promoting encapsulation and reducing
+               dependencies in client code.
+Flexibility: New file types can be added with minimal changes to the existing code, as the client code interacts with
+             the File interface rather than concrete implementations.
+Maintainability: Centralized object creation logic in the factory class simplifies maintenance and modifications.
+
+
